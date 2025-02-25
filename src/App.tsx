@@ -1,6 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { HashRouter, Routes, Route, Link } from 'react-router-dom';
+import NavBar from '../components/navbar';
 
 // Create your page components
 const Home = () => <h2 className='text-amber-600'>Home Page</h2>;
@@ -10,7 +11,8 @@ export const App = () => (
   <HashRouter>
     <div>
       <nav>
-        <Link to="/">Home</Link> |
+        {//<NavBar/>
+        }
       </nav>
 
       <Routes>
