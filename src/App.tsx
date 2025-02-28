@@ -2,21 +2,24 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import NavBar from '../components/navbar';
+import Home from './pages/home';
+import Upload from './pages/upload';
+import Chat from './pages/chat';
 
 // Create your page components
-const Home = () => <h2 className='text-amber-600'>Home Page</h2>;
 
 // Main App component with navigation
 export const App = () => (
   <HashRouter>
-    <div>
-      <nav>
-        {//<NavBar/>
-        }
+    <div className='flex flex-col w-full'>
+      <nav className='items-center justify-center w-full'>
+        <NavBar/>
       </nav>
-
+    
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/upload" element = {<Upload/>} />
+        <Route path = "/chat" element = {<Chat/>} />
       </Routes>
     </div>
   </HashRouter>
